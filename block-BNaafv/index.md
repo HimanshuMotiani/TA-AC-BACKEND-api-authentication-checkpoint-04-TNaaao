@@ -263,7 +263,7 @@ It should also delete associated answers.
 #### Add answer
 
 - method -> POST
-- pathname -> /questions/:questionId/answers
+- pathnam e -> /questions/:questionId/answers
 - authentication required
 
 - required fileds are
