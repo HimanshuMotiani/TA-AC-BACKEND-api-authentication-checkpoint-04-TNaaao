@@ -7,7 +7,8 @@ var questionSchema = new Schema({
     description:String,
     tagList:[String],
     author:{ type: Schema.Types.ObjectId,required: true, ref: "User" },
-    answer:[{ type: Schema.Types.ObjectId,required: true, ref: "Answer" }]
+    answer:[{ type: Schema.Types.ObjectId,required: true, ref: "Answer" }],
+    comments: [{ type: mongoose.Types.ObjectId, ref: "Comment" }],
 },{timestamps:true})
 
 
