@@ -8,7 +8,10 @@ var userSchema = new Schema({
     email:{type:String,required:true},
     password:{type:String,required:true},
     bio:String,
-    image:String
+    image:String,
+    followers:[{type:Schema.Types.ObjectId,ref:"User"}],
+    following:[{type:Schema.Types.ObjectId,ref:"User"}],
+    comments: [{ type: mongoose.Types.ObjectId, ref: "Comment" }]
 })
 
 userSchema.pre("save",async function(next){

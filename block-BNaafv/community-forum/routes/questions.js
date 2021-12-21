@@ -101,4 +101,30 @@ router.get('/tags', async (req, res, next) => {
     }
 })
 
+// router.post("/comment/:questionId", auth.isLoggedIn, async (req, res, next) => {
+//     let loggedProfile = req.user;
+//     let questionId = req.params.questionId;
+  
+//     let data = req.body;
+//     try {
+//       let user = await User.findOne({ username: loggedProfile.username });
+  
+//       data.author = user.id;
+//       data.questionId = questionId;
+//       let comment = await Comment.create(data);
+  
+//       let updatedQuestion = await Question.findByIdAndUpdate(questionId, {
+//         $push: { comments: comment.id },
+//       });
+  
+//       let updatedUser= await User.findByIdAndUpdate(profile.id, {
+//         $push: { comments: comment.id },
+//       });
+  
+//       return res.json({ comment });
+//     } catch (error) {
+//       next(error);
+//     }
+//   });
+
 module.exports = router
